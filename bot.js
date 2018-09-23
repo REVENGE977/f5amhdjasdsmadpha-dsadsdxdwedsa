@@ -807,4 +807,5 @@ client.on('guildMemberAdd', member => {
 if(message.content.startsWith('السلام عليكم')) {
 return message.reply('وعليكم السلام ورحمه الله وبركاته')
 }
+})
 client.login(process.env.BOT_TOKEN)
