@@ -687,8 +687,8 @@ setInterval(function(){})
 
 
 
-client.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find('name', 'Member'));
+client.on('guildMemberAdd', member => {
+    member.guild.member(member.user).addRole(member.guild.roles.find(r => r.name === 'Member'));
 });
 
 
