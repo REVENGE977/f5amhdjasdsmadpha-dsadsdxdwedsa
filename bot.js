@@ -363,6 +363,12 @@ Discord.RichEmbed()
     }
     })
     
+  client.on('message', message => {
+    if (message.content === 'السلام عليكم') {
+        message.reply('وعليكم السلام');
+      }
+});
+
 
 client.on('message', message => {
 if(message.content.startsWith(prefix + 'colors')) {
