@@ -804,8 +804,10 @@ client.on('guildMemberAdd', member => {
      stewart.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
    //  stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
-if(message.content.startsWith('السلام عليكم')) {
-return message.reply('وعليكم السلام ورحمه الله وبركاته')
-}
+  client.on('message', message => {
+    if (message.content === 'السلام عليكم') {
+        message.reply('وعليكم السلام');
+      }
+});
 })
 client.login(process.env.BOT_TOKEN)
